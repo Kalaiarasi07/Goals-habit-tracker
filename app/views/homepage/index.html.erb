@@ -1,0 +1,14 @@
+<h1>Home</h1>
+<% if logged_in? %>
+  <h3>You are logged in as <%= current_user.name %>!</h3>
+  <%= link_to "Add child", '/add-child' %>
+   <%= link_to "logout", '/logout' %>
+  <br><br>
+
+<% else %>
+  <%= link_to "login", '/login' %>
+  <br>
+  <%= link_to "signup", '/signup' %>
+<% end %>
+
+
